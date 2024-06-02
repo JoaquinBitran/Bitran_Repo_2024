@@ -13,6 +13,23 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+
+List<String> users = [
+  'Joaquin',
+  'Sacho',
+  'Gonzalo',
+  'Gabo',
+  'Benja',
+];
+List<String> Passwords = [
+  'J123',
+  '2023',
+  'hola2345',
+  'gabo0703',
+  'Benja1908',
+];
+
+
   TextEditingController userController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   bool showError = false;
@@ -55,9 +72,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     String enteredUser = userController.text;
                     String enteredPassword = passwordController.text;
 
-                    if (enteredUser == 'Joaquin' && enteredPassword == 'Joaquin123') {
-                      print('Successful login');
-                      context.go("/home");
+                    if (users.contains(enteredUser)) {
+                      int userIndex = users.indexOf(enteredUser);
+
+                        if(Passwords[userIndex] = !enteredPassword){
+                            print('incorrect password');
+                        }
                     } else {
                       setState(() {
                         showError = true;

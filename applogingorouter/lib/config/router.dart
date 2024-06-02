@@ -1,5 +1,5 @@
 import 'package:applogingorouter/Screens/LoginScreen.dart';
-import 'package:applogingorouter/Screens/main.dart';
+import 'package:applogingorouter/Screens/HomeScreen.dart';
 import 'package:go_router/go_router.dart';
 
 final appRouter = GoRouter(routes: [
